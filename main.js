@@ -1,78 +1,33 @@
 "use strict";
 ;
 (() => {
-    class Mutante {
-        constructor(name, realName) {
-            this.name = name;
-            this.realName = realName;
-        }
-    }
-    class Xmen extends Mutante {
-        salvarMundo() {
-            return 'Mundo a salvo!';
-        }
-    }
-    class Villian extends Mutante {
-        conquistarMundo() {
-            return 'Mundo conquistado!';
-        }
-    }
-    const wolverine = new Xmen('Wolverine', 'Logan');
-    const magneto = new Villian('Magneto', 'Magnus');
-    const printName = (character) => {
-        console.log(character.realName);
+    let flash = {
+        name: 'Barry Allen',
+        age: 24,
+        powers: ['Super velocidad', 'Viajar en el tiempo'],
     };
-    printName(wolverine);
-})();
-(() => {
-    class Avenger {
-        static getAvgAge() {
+    let superman = {
+        name: 'Clark Kent',
+        age: 60,
+        powers: ['Super fuerza'],
+        getName() {
             return this.name;
-        }
-        constructor(name, team, realName) {
-            this.name = name;
-            this.team = team;
-            this.realName = realName;
-            this.realName = `${name} ${team}`;
-        }
-        bio() {
-            return `${this.name} (${this.team})`;
-        }
-    }
-    Avenger.avgAge = 35;
-    const atman = new Avenger('Atman', 'Capitan');
+        },
+    };
 })();
 (() => {
-    class Avenger {
-        constructor(name, realName) {
-            this.name = name;
-            this.realName = realName;
-        }
-        getFullName() {
-            return `${this.name} ${this.realName}`;
-        }
-        getPower() {
-            return 100000;
-        }
-    }
-    class Xmen extends Avenger {
-        constructor(name, realName, isMutant) {
-            super(name, realName);
-            this.isMutant = isMutant;
-        }
-        get fullName() {
-            return `${this.name} - ${this.realName}`;
-        }
-        set fullName(name) {
-            if (name.length < 3) {
-                throw new Error('El nombre debe tener al menos 3 letras');
-            }
-            this.name = name;
-        }
-        getFullNameXmen() {
-        }
-    }
-    const wolverine = new Xmen('Wolverine', 'Logan', true);
-    wolverine.fullName = 'Wolverine2';
+    const client = {
+        name: 'Juan',
+        age: 25,
+        address: {
+            _id: 125,
+            zip: 'KY2 SUD',
+            city: 'Ottawa'
+        },
+    };
+    const client2 = {
+        name: 'Melissa',
+        age: 30,
+    };
 })();
 //# sourceMappingURL=main.js.map
