@@ -15,6 +15,19 @@
         },
     };
 })();
+;
+(() => {
+    class Mutant {
+        constructor() {
+            this.age = 0;
+            this.name = '';
+            this.realName = '';
+        }
+        mutantPower(id) {
+            return this.name + ' ' + this.realName;
+        }
+    }
+})();
 (() => {
     const client = {
         name: 'Juan',
@@ -29,5 +42,10 @@
         name: 'Melissa',
         age: 30,
     };
+})();
+;
+(() => {
+    let addNumbersFunction;
+    addNumbersFunction = (a, b) => a + b;
 })();
 //# sourceMappingURL=main.js.map
