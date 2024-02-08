@@ -5,9 +5,9 @@ interface Auto {
   acelear(): void;
 }
 interface Villano {
-  reir: boolean;
-  comer: boolean;
-  llorar: boolean;
+  reir?: boolean;
+  comer?: boolean;
+  llorar?: boolean;
 }
 // Cree una interfaz para validar el auto (el valor enviado por parametro)
 const conducirBatimovil = ( auto:Auto ):void => {
@@ -41,10 +41,10 @@ const reir = ( guason:Villano ):void => {
 
 
 // Cree una interfaz para la siguiente funcion
-interface numeroDeCiudadanos {
+interface NumeroDeCiudadanos {
   (ciudadanos:string[]):number;
 }
-const ciudadGotica:numeroDeCiudadanos = ( ciudadanos:string[] ):number => {
+const ciudadGotica:NumeroDeCiudadanos = ( ciudadanos:string[] ):number => {
   return ciudadanos.length;
 }
 
